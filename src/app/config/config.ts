@@ -2,5 +2,5 @@
 
 export const config = {
     production: false,
-    baseUrl: 'http://a71755ee.ngrok.io/api'
+    baseUrl: 'http://13.126.240.4:3000/api'
 };

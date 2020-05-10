@@ -37,7 +37,7 @@ export interface UserData {
     animations: fuseAnimations
 })
 export class ChartererManagementComponent implements OnInit, OnDestroy {
-    displayedColumns: string[] = ['id', 'name', 'mobileno', 'email', 'company',  'action', 'status'];
+    displayedColumns: string[] = ['id', 'name', 'mobileno', 'email', 'company',  'action'];
     dialogRef: any;
     hasSelectedContacts: boolean;
     searchInput: FormControl;
@@ -147,6 +147,11 @@ export class ChartererManagementComponent implements OnInit, OnDestroy {
     }
 
     editRole(id): void {      
+        localStorage.setItem('chartererId', id);
+        this.router.navigate(['/apps/charterer-management/edit-charterer']);
+    }
+
+     contactRole(id): void {      
         localStorage.setItem('chartererId', id);
         this.router.navigate(['/apps/charterer-management/edit-charterer']);
     }

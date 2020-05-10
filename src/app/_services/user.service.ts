@@ -16,7 +16,6 @@ export class UserService {
             this.router.navigate(['/pages/auth/login'])
         }
     }
-
     getDoctorList() {
         return this.http.get(`${config.baseUrl}/doctorList`);
     }
@@ -27,11 +26,15 @@ export class UserService {
     getCompanyList() {
         return this.http.get(`${config.baseUrl}/companylist`);
     }
+
+
     getChartererList() {
-        return this.http.get(`${config.baseUrl}/charterlist`);
+        return this.http.get(`${config.baseUrl}/patientList`);
     }
+
+    
     getbrokererList() {
-        return this.http.get(`${config.baseUrl}/AllBrokerlist`);
+        return this.http.get(`${config.baseUrl}/getSpecialties`);
     }
     addCompanyList(req) {
         return this.http.post(`${config.baseUrl}/companycreate`, req);
@@ -52,7 +55,7 @@ export class UserService {
         return this.http.post(`${config.baseUrl}/charterupdate`, req);
     }
     getChartererDetail(req) {
-        return this.http.post(`${config.baseUrl}/charterdetails`, req);
+        return this.http.post(`${config.baseUrl}/patientList`, req);
     }
     getbrokererDetail(req) {
         return this.http.post(`${config.baseUrl}/BrokerDetails`, req);

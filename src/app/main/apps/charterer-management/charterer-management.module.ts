@@ -18,6 +18,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ChartererManagementComponent } from 'app/main/apps/charterer-management/charterer-management.component';
 import { AddChartererComponent } from 'app/main/apps/charterer-management/add-charterer/add-charterer.component';
 import { EditChartererComponent } from 'app/main/apps/charterer-management/edit-charterer/edit-charterer.component';
+import { ContactChartererComponent } from 'app/main/apps/charterer-management/contact-charterer/contact-charterer.component';
 const routes: Routes = [
     {
          path     : 'add-charterer',
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
          path     : 'edit-charterer',
          component: EditChartererComponent,
+    },
+    {
+         path     : 'contact-charterer',
+         component: ContactChartererComponent,
     },
     {
         path     : '**',
@@ -37,6 +42,7 @@ const routes: Routes = [
         ChartererManagementComponent,
         AddChartererComponent,
         EditChartererComponent,
+        ContactChartererComponent,
     ],
     imports        : [
         RouterModule.forChild(routes),

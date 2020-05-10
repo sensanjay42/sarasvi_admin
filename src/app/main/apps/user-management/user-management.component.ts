@@ -121,7 +121,6 @@ export class UserManagementComponent implements OnInit, OnDestroy {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
 
-        this.doctorList();
         this.roleList();
     }
     /**
