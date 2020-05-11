@@ -28,12 +28,12 @@ export const navigation: FuseNavigation[] = [
        
 
             {
-                id: 'doctor',
+                id: 'company',
                 title: 'Doctor Management',
                 translate: 'NAV.ROLEMANAGE',
                 type: 'item',
                 icon: 'group',
-                url: '/apps/doctor-management'
+                url: '/apps/company-management'
             },
 
             // {

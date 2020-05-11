@@ -32,6 +32,9 @@ export class UserService {
         return this.http.get(`${config.baseUrl}/patientList`);
     }
 
+    getcontactList(req){
+        return this.http.post(`${config.baseUrl}/getPatientContact`, req);
+    }
     
     getbrokererList() {
         return this.http.get(`${config.baseUrl}/getSpecialties`);
