@@ -39,7 +39,7 @@ const routes = [
     },
 
     {
-        path: 'master/company-management',
+        path: 'company-management',
         loadChildren: './company-management/company-management.module#CompanyManagementModule',
        
     },

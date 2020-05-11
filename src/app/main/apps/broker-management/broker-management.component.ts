@@ -37,7 +37,7 @@ export interface UserData {
     animations: fuseAnimations
 })
 export class BrokerManagementComponent implements OnInit, OnDestroy {
-    displayedColumns: string[] = ['id', 'name', 'mobileno', 'email', 'company',  'action'];
+    displayedColumns: string[] = ['id', 'name', 'action'];
     dialogRef: any;
     hasSelectedContacts: boolean;
     searchInput: FormControl;

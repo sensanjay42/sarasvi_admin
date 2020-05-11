@@ -6,14 +6,14 @@
     <div class="heading center">        
         <div class="header-row">
             <div class="row-col-3">
-                <h2>Paitent Management</h2>
+                <h2>{{this.patientName}} - Contact List</h2>
             </div>
             <div class="row-col-6">
                 <div>                    
                 </div>
             </div>
             <div class="row-col-3">
-                <mat-icon class="home">home</mat-icon> <a routerLink="/apps/dashboards/analytics"> Home </a> > <b> Paitent Management </b>
+                <mat-icon class="home">home</mat-icon> <a routerLink="/apps/dashboards/analytics"> Home </a> > <b> Contact List </b>
             </div>
         </div>
         <div class="mat-elevation-z8">
@@ -21,7 +21,7 @@
             <div class="main-tab">                
                 <div class="header-row">
                     <div class="row-col-3">
-                        <button class="add-role" routerLink="/apps/charterer-management/add-charterer"> Add Paitent </button>
+                        <!-- <button class="add-role" routerLink="/apps/charterer-management/add-charterer"> Add Paitent </button> -->
                     </div>
                     <div class="row-col-6"></div>
                     
@@ -43,7 +43,7 @@
                     </ng-container>
 
                     <ng-container matColumnDef="name">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact Person Name </th>
                         <td mat-cell *matCellDef="let row"> {{row.name}} </td>
                     </ng-container>
 

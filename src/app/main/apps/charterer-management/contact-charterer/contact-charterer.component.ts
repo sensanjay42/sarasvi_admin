@@ -61,7 +61,7 @@ export class ContactChartererComponent implements OnInit, OnDestroy {
     filterValue: string;
     userRoleId: any;
     tempUserListData: any;
-    
+    patientName: any;
     // Private
     
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -91,7 +91,8 @@ export class ContactChartererComponent implements OnInit, OnDestroy {
     this.userRoleId = '';
     this.dataSource = new MatTableDataSource(this.userListData);
 
-    
+    this.patientName = localStorage.getItem('patientName')
+
     let userToken = localStorage.getItem('userToken')
     if(userToken==undefined){
         this.router.navigate(['/']);

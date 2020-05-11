@@ -37,7 +37,7 @@ export interface UserData {
     animations: fuseAnimations
 })
 export class CompanyManagementComponent implements OnInit, OnDestroy {
-    displayedColumns: string[] = ['id', 'companyname', 'createddate', 'owner', 'contactno',  'action', 'status'];
+    displayedColumns: string[] = ['id', 'companyname', 'createddate', 'owner', 'contactno', 'degree', 'address', 'action'];
     dialogRef: any;
     hasSelectedContacts: boolean;
     searchInput: FormControl;
@@ -110,7 +110,7 @@ export class CompanyManagementComponent implements OnInit, OnDestroy {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         
-        this.companyList();
+        this.doctorList();
         // this.roleList();
         
     }
@@ -155,9 +155,9 @@ export class CompanyManagementComponent implements OnInit, OnDestroy {
     
    
 
-    companyList(): void {
+    doctorList(): void {
         try {
-            this._userService.getCompanyList()
+            this._userService.getDoctorList()
             .pipe(first())
             .subscribe((res) => {
                 this.userListRes = res;
@@ -194,7 +194,7 @@ export class CompanyManagementComponent implements OnInit, OnDestroy {
                         this.deleteRoleRes = res;
                         if (this.deleteRoleRes.success === true) {
                             this.alertService.success('Successfully Deleted', 'Success');
-                            this.companyList();
+                            this.doctorList();
                             this.showModaldeleteStatus = false;
                         } else {
                             this.alertService.error(this.deleteRoleRes.message, 'Error');

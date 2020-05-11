@@ -151,8 +151,9 @@ export class ChartererManagementComponent implements OnInit, OnDestroy {
         this.router.navigate(['/apps/charterer-management/edit-charterer']);
     }
 
-     contactRole(id): void {      
+     contactRole(id, name): void {      
         localStorage.setItem('patientId', id);
+        localStorage.setItem('patientName', name);
         this.router.navigate(['/apps/charterer-management/contact-charterer']);
     }
     
